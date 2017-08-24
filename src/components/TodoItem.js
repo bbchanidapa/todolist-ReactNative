@@ -11,18 +11,11 @@ class TodoItem extends Component {
   constructor(props){
 		super(props)
   }
-	
-	dsfdsf(lists) {
-		return  this.props.lists.map((item) => {
-			console.log(item)
-			return null
-		})
-	}
 
   render() {
     return (
       <View>
-				{ this.dsfdsf() }
+				<Text>{this.props.item}</Text>
       </View>
     )
   }

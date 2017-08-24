@@ -13,10 +13,11 @@ class ListTodo extends Component {
       list: []
     }
   }
-
-  componentWillReceiveProps = (nextProps) => {
-    this.setState({
-      list: nextProps
+  listItem (){
+    return this.props.lists.map((text, index)=>{
+      return (
+        <TodoItem key={index} item={text}/>
+      )
     })
   }
   
@@ -24,7 +25,7 @@ class ListTodo extends Component {
     return (
       <View>
         <List>
-          <TodoItem lists={this.state.list}/>
+          {this.listItem()}
         </List>
       </View>
     )
